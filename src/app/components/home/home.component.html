@@ -1,0 +1,18 @@
+
+<br><br>
+<div class="card-columns">
+    <div class="card" *ngFor="let pelicula of peliculas">
+      <img src="https://image.tmdb.org/t/p/w400/{{ pelicula.backdrop_path }}" class="card-img-top" alt="...">
+      <!-- <img src="https://image.tmdb.org/t/p/w400/{{ pelicula.poster_path }}" class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">{{ pelicula.title }}</h5>
+        <p class="card-text">{{ pelicula.overview }}</p>
+      </div>
+      <div class="card-footer text-center">
+          <small class="text-muted">Estreno {{ pelicula.release_date }}</small>
+          <hr>
+          <button class="btn btn-primary btn-block" [routerLink]="['/pelicula',pelicula.id]" routerLinkActive="router-link-active" >Ver más</button>
+        </div>
+    </div>
+    
+  </div>

@@ -1,0 +1,25 @@
+<br><br>
+<div class="card mb-3"
+>
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="https://image.tmdb.org/t/p/w300/{{ descripcion.poster_path }}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">{{descripcion.title}}</h3>
+              <p class="card-text">{{descripcion.overview}}</p>
+              <p class="card-text"><small class="text-muted">Lanzamiento {{descripcion.release_date}}</small></p>
+            </div>
+            <div class="card-footer">
+                <h3>Estadisticas</h3>
+                <hr>
+                <p class="card-text">Popularidad: {{descripcion.popularity}}</p>
+                <hr>
+                <p class="card-text">Presupuesto: USD{{descripcion.budget | currency:'USD' }}</p>
+                <hr>
+                <p class="card-text">Ganancias: USD{{descripcion.revenue | currency:'USD' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
